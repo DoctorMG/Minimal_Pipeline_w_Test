@@ -43,5 +43,10 @@ pipeline {
         failure {
             echo 'Build fehlgeschlagen.'
         }
+        // immer ausgeführt
+        always {
+            junit '**/target/surefire-reports/*.xml'
+        }
+
     }
 }
