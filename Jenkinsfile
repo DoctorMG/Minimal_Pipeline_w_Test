@@ -27,13 +27,6 @@ pipeline {
                 bat 'java -jar target/minimal-maven-1.0-SNAPSHOT.jar'
             }
         }
-
-        stage('Test') {
-            steps {
-                // Beispiel: Tests ausführen
-                bat 'mvn test'
-            }
-        }
     }
 
     post {
@@ -43,10 +36,4 @@ pipeline {
         failure {
             echo 'Build fehlgeschlagen.'
         }
-        // immer ausgeführt
-        always {
-            junit '**/target/surefire-reports/*.xml'
-        }
-
-    }
 }

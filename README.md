@@ -1,1 +1,4 @@
-# Minimal_Pipeline_w_Run
+# Minimal_Pipeline w Run Stage
+a minimal pipeline for Jenkins
+
+Demonstrator
