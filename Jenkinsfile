@@ -22,6 +22,12 @@ pipeline {
             }
         }
 
+        stage('Run') {
+            steps {
+                bat 'java -jar target/minimal-maven-1.0-SNAPSHOT.jar'
+            }
+        }
+
         stage('Test') {
             steps {
                 // Beispiel: Tests ausführen
